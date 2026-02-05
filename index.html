@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Présentation BTS SIO - Oral 2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <span class="badge-sio">BTS SIO</span>
+            <span class="session">Session 2026</span>
+        </div>
+        <nav>
+            <button onclick="showPage('profil')" class="nav-btn active">Mon Profil</button>
+            <button onclick="showPage('entreprise')" class="nav-btn">L'Entreprise</button>
+            <button onclick="showPage('missions')" class="nav-btn">Missions & Analyse</button>
+            <button onclick="showPage('competences')" class="nav-btn">Compétences</button>
+        </nav>
+    </header>
+
+    <main class="container">
+        
+        <section id="profil" class="page active">
+            <div class="hero">
+                <h1>Présentation de <span>[Ton Prénom]</span></h1>
+                <p>Option : <strong>[SLAM ou SISR]</strong></p>
+                <div class="profile-card">
+                    <p><strong>Mon Parcours :</strong> Après un [Bac/Formation], j'ai intégré ce BTS pour concrétiser mon intérêt pour [Le Cloud / Le Dev / La Cybersécurité].</p>
+                    <p><strong>Mon Alternance :</strong> Un parcours de 2 ans qui m'a permis d'évoluer de l'assistance utilisateur vers la gestion de projets techniques.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="entreprise" class="page">
+            <h2>Cadre de l'Alternance</h2>
+            <div class="content-box">
+                <div class="text">
+                    <h3>[Nom de l'entreprise]</h3>
+                    <p><strong>Domaine :</strong> [Décris l'activité de la boîte ici].</p>
+                    <p><strong>Organisation du service IT :</strong> Nous sommes [Nombre] personnes. J'utilise des outils de ticketing comme [GLPI/Jira] pour organiser mes journées.</p>
+                    <p><strong>Mon Rôle :</strong> Garantir la disponibilité des services et accompagner les utilisateurs dans leurs besoins numériques.</p>
+                </div>
+                <div class="logo-box">
+                    <p>[Logo Entreprise]</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="missions" class="page">
+            <h2>Réalisations Techniques</h2>
+            
+            <div class="mission-full">
+                <div class="mission-header">
+                    <span class="mission-id">PROJET #1</span>
+                    <h3>[Titre de la Mission, ex: Migration serveur]</h3>
+                </div>
+                <div class="mission-details">
+                    <div class="detail-col">
+                        <h4>Le Besoin (Pourquoi ?)</h4>
+                        <p>L'entreprise utilisait [Ancien système] qui était devenu [trop lent / pas assez sécurisé]. Ma mission était de [Objectif].</p>
+                        
+                        <h4>La Réalisation (Comment ?)</h4>
+                        <p>1. Analyse du matériel existant.<br>
+                           2. Phase de tests en environnement virtuel (VMware).<br>
+                           3. Mise en production et rédaction de la documentation.</p>
+                    </div>
+                    <div class="detail-col">
+                        <h4>Contraintes & Solutions</h4>
+                        <p>J'ai dû faire face à [Problème technique]. Pour le résoudre, j'ai utilisé [Outil/Commande] ce qui m'a permis de [Résultat].</p>
+                        <div class="mission-image">Capture technique</div>
+                    </div>
+                </div>
+            </div>
+
+            </section>
+
+        <section id="competences" class="page">
+            <h2>Hard & Soft Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <h4>Informatique</h4>
+                    <ul>
+                        <li>Réseaux : [VLAN, Adressage IP]</li>
+                        <li>Systèmes : [Windows Server, Linux]</li>
+                        <li>Code : [PHP, SQL, Bash]</li>
+                    </ul>
+                </div>
+                <div class="skill-item">
+                    <h4>Professionnel</h4>
+                    <ul>
+                        <li>Rédaction de procédures techniques</li>
+                        <li>Veille technologique (Feedly, Reddit)</li>
+                        <li>Gestion des priorités (Ticketing)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bilan-final">
+                <p><strong>Bilan :</strong> Ces deux années m'ont appris que la technique ne suffit pas ; la rigueur et la communication sont essentielles pour réussir un projet IT.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        function showPage(pageId) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById(pageId).classList.add('active');
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
